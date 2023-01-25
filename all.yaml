@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: blue
+  name: blue
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      version: v1
+  template:
+    metadata:
+      labels:
+        version: v1
+    spec:
+      containers:
+      - image: redis:6.0.17-alpine
+        name: redis
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: green
+  name: green
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      version: v2
+  template:
+    metadata:
+      labels:
+        version: v2
+    spec:
+      containers:
+      - image: redis:7.0.8-alpine
+        name: redis
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-service
+spec:
+  ports:
+  - port: 6379
+    protocol: TCP
+    targetPort: 6379
+  selector:
+    version: v1
+
