@@ -17,8 +17,3 @@ What script does:
 7. Removes all objects and forwarding
 
 ![](https://github.com/sunst0rm/kubernetes-bluegreen/blob/master/kube.gif)
-
-### Author
-
-Jarosław Kozioł
-[@linkedin](https://www.linkedin.com/in/jaroslaw-koziol/)
