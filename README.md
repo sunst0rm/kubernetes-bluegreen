@@ -16,6 +16,8 @@ What script does:
 6. Shows that current image version is newer so service points to green deployment now.
 7. Remove all objects and forwarding
 
+![](https://github.com/sunst0rm/kubernetes-bluegreen/blob/master/kube.gif)
+
 ### Author
 
 Jarosław Kozioł
