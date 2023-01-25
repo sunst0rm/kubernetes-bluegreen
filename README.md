@@ -14,7 +14,7 @@ What script does:
 4. Modifies service label to `version: v2`
 5. Stops and forwards service once again
 6. Shows that current image version is newer so service points to green deployment now.
-7. Remove all objects and forwarding
+7. Removes all objects and forwarding
 
 ![](https://github.com/sunst0rm/kubernetes-bluegreen/blob/master/kube.gif)
 
